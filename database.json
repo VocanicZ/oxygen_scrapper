@@ -1,0 +1,643 @@
+{
+    "database": [
+        {
+            "name": "elements",
+            "default": {
+                "fandom": "ps",
+                "db": "f",
+                "d_trigger": "ca",
+                "file": "s",
+                "file_name": "s"
+            },
+            "contents": [
+                {
+                    "name": "gas",
+                    "contents": [
+                        {
+                            "name": "breathable_gas",
+                            "contents": [
+                                {
+                                    "name": "Oxygen"
+                                },
+                                {
+                                    "name": "Polluted Oxygen",
+                                    "db": "contaminatedoxygen"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "unbreathable_gas",
+                            "contents": [
+                                {
+                                    "name": "Carbon Dioxide"
+                                },
+                                {
+                                    "name": "Aluminum",
+                                    "file_name": "aluminum_gas",
+                                    "wiki": "Gas_Aluminum"
+                                },
+                                {
+                                    "name": "Carbon",
+                                    "file_name": "carbon_gas",
+                                    "wiki": "Gas_Carbon"
+                                },
+                                {
+                                    "name": "Chlorine",
+                                    "file_name": "chlorine_gas",
+                                    "wiki": "Gas_Chlorine"
+                                },
+                                {
+                                    "name": "Cobalt",
+                                    "file_name": "cobalt_gas",
+                                    "wiki": "Gas_Cobalt"
+                                },
+                                {
+                                    "name": "Copper",
+                                    "file_name": "copper_gas",
+                                    "wiki": "Gas_Copper"
+                                },
+                                {
+                                    "name": "Ethanol",
+                                    "file_name": "ethanol_gas",
+                                    "wiki": "Gas_Ethanol"
+                                },
+                                {
+                                    "name": "Gold",
+                                    "file_name": "gold_gas",
+                                    "wiki": "Gas_Gold"
+                                },
+                                {
+                                    "name": "Iron",
+                                    "file_name": "iron_gas",
+                                    "wiki": "Gas_Iron"
+                                },
+                                {
+                                    "name": "Lead",
+                                    "file_name": "lead_gas",
+                                    "wiki": "Gas_Lead"
+                                },
+                                {
+                                    "name": "Niobium",
+                                    "file_name": "niobium_gas",
+                                    "wiki": "Gas_Niobium"
+                                },
+                                {
+                                    "name": "Phosphorus",
+                                    "file_name": "phosphorus_gas",
+                                    "wiki": "Gas_Phosphorus"
+                                },
+                                {
+                                    "name": "Salt",
+                                    "file_name": "salt_gas",
+                                    "wiki": "Gas_Salt"
+                                },
+                                {
+                                    "name": "Steel",
+                                    "file_name": "steel_gas",
+                                    "wiki": "Gas_Steel"
+                                },
+                                {
+                                    "name": "Sulfur",
+                                    "file_name": "sulfur_gas",
+                                    "wiki": "Gas_Sulfur"
+                                },
+                                {
+                                    "name": "Super Coolant",
+                                    "file_name": "super_coolant_gas",
+                                    "wiki": "Gas_Super_Coolant"
+                                },
+                                {
+                                    "name": "Tungsten",
+                                    "file_name": "tungsten_gas"
+                                },
+                                {
+                                    "name": "Hydrogen"
+                                },
+                                {
+                                    "name": "Natural Gas",
+                                    "file_name": "methane",
+                                    "wiki": "Natural_Gas"
+                                },
+                                {
+                                    "name": "Nuclear Fallout",
+                                    "db": "fallout"
+                                },
+                                {
+                                    "name": "Propane"
+                                },
+                                {
+                                    "name": "Rock Gas"
+                                },
+                                {
+                                    "name": "Sour Gas"
+                                },
+                                {
+                                    "name": "Steam"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "liquid",
+                    "contents": [
+                        {
+                            "name": "Brine"
+                        },
+                        {
+                            "name": "Chlorine"
+                        },
+                        {
+                            "name": "Crude Oil"
+                        },
+                        {
+                            "name": "Ethanol"
+                        },
+                        {
+                            "name": "Carbon Dioxide",
+                            "file_name": "liquid_carbon_dioxide"
+                        },
+                        {
+                            "name": "Hydrogen",
+                            "file_name": "liquid_hydrogen"
+                        },
+                        {
+                            "name": "Methane",
+                            "file_name": "liquid_methane"
+                        },
+                        {
+                            "name": "Oxygen",
+                            "file_name": "liquid_oxygen"
+                        },
+                        {
+                            "name": "Phosphorus",
+                            "file_name": "liquid_phosphorus"
+                        },
+                        {
+                            "name": "Propane",
+                            "file_name": "liquid_propane"
+                        },
+                        {
+                            "name": "Liquid Sulfur"
+                        },
+                        {
+                            "name": "Magma"
+                        },
+                        {
+                            "name": "Aluminum",
+                            "file_name": "molten_aluminum"
+                        },
+                        {
+                            "name": "Carbon",
+                            "file_name": "molten_carbon"
+                        },
+                        {
+                            "name": "Cobalt",
+                            "file_name": "molten_cobalt"
+                        },
+                        {
+                            "name": "Copper",
+                            "file_name": "molten_copper"
+                        },
+                        {
+                            "name": "Glass",
+                            "file_name": "molten_glass"
+                        },
+                        {
+                            "name": "Gold",
+                            "file_name": "molten_gold"
+                        },
+                        {
+                            "name": "Iron",
+                            "file_name": "molten_iron"
+                        },
+                        {
+                            "name": "Lead",
+                            "file_name": "molten_lead"
+                        },
+                        {
+                            "name": "Niobium",
+                            "file_name": "molten_niobium"
+                        },
+                        {
+                            "name": "Salt",
+                            "file_name": "molten_salt"
+                        },
+                        {
+                            "name": "Steel",
+                            "file_name": "molten_steel"
+                        },
+                        {
+                            "name": "Sucrose",
+                            "file_name": "molten_sucrose"
+                        },
+                        {
+                            "name": "Tungsten",
+                            "file_name": "molten_tungsten"
+                        },
+                        {
+                            "name": "Uranium",
+                            "file_name": "molten_uranium"
+                        },
+                        {
+                            "name": "Naphtha"
+                        },
+                        {
+                            "name": "Nuclear Waste",
+                            "file_name": "nuclear_waste"
+                        },
+                        {
+                            "name": "Petroleum"
+                        },
+                        {
+                            "name": "Polluted Water",
+                            "db": "dirtywater"
+                        },
+                        {
+                            "name": "Resin"
+                        },
+                        {
+                            "name": "Salt Water"
+                        },
+                        {
+                            "name": "Super Coolant"
+                        },
+                        {
+                            "name": "Visco-Gel",
+                            "file_name": "visco_gel",
+                            "d_trigger": "Visco-Gel",
+                            "wiki": "Visco-Gel"
+                        },
+                        {
+                            "name": "Water"
+                        }
+                    ]
+                },
+                {
+                    "name": "solid",
+                    "contents": [
+                        {
+                            "name": "agriculture",
+                            "contents": [
+                                {
+                                    "name": "Fertilizer"
+                                },
+                                {
+                                    "name": "Phosphorite"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "refined_mineral",
+                            "contents": [
+                                {
+                                    "name": "Crushed Rock"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "raw_mineral",
+                            "contents": [
+                                {
+                                    "name": "Ceramic"
+                                },
+                                {
+                                    "name": "Fossil"
+                                },
+                                {
+                                    "name": "Granite"
+                                },
+                                {
+                                    "name": "Graphite"
+                                },
+                                {
+                                    "name": "Igneous Rock"
+                                },
+                                {
+                                    "name": "Mafic Rock"
+                                },
+                                {
+                                    "name": "Obsidian"
+                                },
+                                {
+                                    "name": "Sandstone"
+                                },
+                                {
+                                    "name": "Sedimentary Rock"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "consumable_ore",
+                            "contents": [
+                                {
+                                    "name": "Bleach Stone"
+                                },
+                                {
+                                    "name": "Coal",
+                                    "db": "carbon"
+                                },
+                                {
+                                    "name": "Lime"
+                                },
+                                {
+                                    "name": "Oxylite",
+                                    "db": "oxyrock"
+                                },
+                                {
+                                    "name": "Phosphorus"
+                                },
+                                {
+                                    "name": "Refined Carbon"
+                                },
+                                {
+                                    "name": "Rust"
+                                },
+                                {
+                                    "name": "Salt"
+                                },
+                                {
+                                    "name": "Methane",
+                                    "file_name": "solid_methane"
+                                },
+                                {
+                                    "name": "Sucrose"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "cultivable_soil",
+                            "contents": [
+                                {
+                                    "name": "Clay"
+                                },
+                                {
+                                    "name": "Dirt"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "filtration_medium",
+                            "contents": [
+                                {
+                                    "name": "Regolith"
+                                },
+                                {
+                                    "name": "Sand"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "liquefiable",
+                            "contents": [
+                                {
+                                    "name": "Brine Ice"
+                                },
+                                {
+                                    "name": "Crushed Ice"
+                                },
+                                {
+                                    "name": "Ice"
+                                },
+                                {
+                                    "name": "Polluted Ice",
+                                    "db": "dirtyice"
+                                },
+                                {
+                                    "name": "Snow"
+                                },
+                                {
+                                    "name": "Carbon Dioxide",
+                                    "file_name": "solid_carbon_dioxide"
+                                },
+                                {
+                                    "name": "Chlorine",
+                                    "file_name": "solid_chlorine"
+                                },
+                                {
+                                    "name": "Crude Oil",
+                                    "file_name": "solid_crude_oil"
+                                },
+                                {
+                                    "name": "Hydrogen",
+                                    "file_name": "solid_hydrogen"
+                                },
+                                {
+                                    "name": "Naphtha",
+                                    "file_name": "solid_naphtha"
+                                },
+                                {
+                                    "name": "Oxygen",
+                                    "file_name": "solid_oxygen"
+                                },
+                                {
+                                    "name": "Petroleum",
+                                    "file_name": "solid_petroleum"
+                                },
+                                {
+                                    "name": "Propane",
+                                    "file_name": "solid_propane"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "manufactured_material",
+                            "contents": [
+                                {
+                                    "name": "Enriched Uranium"
+                                },
+                                {
+                                    "name": "Glass"
+                                },
+                                {
+                                    "name": "Insulatite",
+                                    "db": "superinsulator",
+                                    "d_trigger": "Insulation"
+                                },
+                                {
+                                    "name": "Plastic",
+                                    "db": "polypropylene"
+                                },
+                                {
+                                    "name": "Super Coolant",
+                                    "file_name": "solid_super_coolant"
+                                },
+                                {
+                                    "name": "Visco-Gel",
+                                    "file_name": "solid_visco_gel",
+                                    "d_trigger": "Visco-Gel",
+                                    "wiki": "Solid_Visco-Gel"
+                                },
+                                {
+                                    "name": "Steel"
+                                },
+                                {
+                                    "name": "Thermium",
+                                    "db": "tempconductorsolid"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "metal_ore",
+                            "contents": [
+                                {
+                                    "name": "Aluminum Ore"
+                                },
+                                {
+                                    "name": "Cobalt Ore",
+                                    "db": "cobalite"
+                                },
+                                {
+                                    "name": "Copper Ore",
+                                    "db": "cuprite"
+                                },
+                                {
+                                    "name": "Electrum"
+                                },
+                                {
+                                    "name": "Gold Amalgam"
+                                },
+                                {
+                                    "name": "Iron Ore"
+                                },
+                                {
+                                    "name": "Pyrite",
+                                    "db": "foolsgold"
+                                },
+                                {
+                                    "name": "Uranium Ore"
+                                },
+                                {
+                                    "name": "Wolframite"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "organic",
+                            "contents": [
+                                {
+                                    "name": "Algae"
+                                },
+                                {
+                                    "name": "Mud"
+                                },
+                                {
+                                    "name": "Polluted Dirt",
+                                    "db": "toxicsand"
+                                },
+                                {
+                                    "name": "Polluted Mud",
+                                    "db": "toxicmud"
+                                },
+                                {
+                                    "name": "Slime",
+                                    "db": "slimemold"
+                                },
+                                {
+                                    "name": "Solid Resin",
+                                    "d_trigger": "Resin"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "miscellaneous",
+                            "contents": [
+                                {
+                                    "name": "Abyssalite",
+                                    "db": "katairite"
+                                },
+                                {
+                                    "name": "Corium"
+                                },
+                                {
+                                    "name": "Diamond"
+                                },
+                                {
+                                    "name": "Solid Nuclear Waste"
+                                },
+                                {
+                                    "name": "Sulfur"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "rare_resource",
+                            "contents": [
+                                {
+                                    "name": "Fullerene"
+                                },
+                                {
+                                    "name": "Isoresin"
+                                },
+                                {
+                                    "name": "Niobium"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "refined_metal",
+                            "contents": [
+                                {
+                                    "name": "Aluminum"
+                                },
+                                {
+                                    "name": "Cobalt"
+                                },
+                                {
+                                    "name": "Copper"
+                                },
+                                {
+                                    "name": "Depleted Uranium"
+                                },
+                                {
+                                    "name": "Gold"
+                                },
+                                {
+                                    "name": "Iron"
+                                },
+                                {
+                                    "name": "Lead"
+                                },
+                                {
+                                    "name": "Tungsten"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "special",
+                            "contents": [
+                                {
+                                    "name": "Neutronium",
+                                    "db": "unobtanium"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "uncategorised",
+                            "contents": [
+                                {
+                                    "name": "Bitumen"
+                                },
+                                {
+                                    "name": "Genetic Ooze",
+                                    "db": "creature"
+                                },
+                                {
+                                    "name": "Radium"
+                                },
+                                {
+                                    "name": "Ethanol",
+                                    "file_name": "solid_ethanol"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "special",
+                    "contents": []
+                }
+            ]
+        }
+    ]
+}
