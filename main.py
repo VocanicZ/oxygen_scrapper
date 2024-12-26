@@ -24,7 +24,7 @@ for content in database_elements:
     def inner(js=js,state=state,sub_state=sub_state, uri=uri):
         name=convert.get(js, "file_name")
         print("database/elements/"+state+"/"+sub_state+"/"+name+".json")
-        js_out = generate.scrape(uri, js, state, sub_state, 2)
+        js_out = generate.scrape(uri, js, state, sub_state, 5)
         if js_out == None:
             with safe_open.w("error/"+name+".json") as file:
                 file.write(json.dumps(js_out, indent=4))
