@@ -1,22 +1,31 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 import time
 import re
 import convert
 
-def info_float(text):
-    return float(re.sub(r'[^0-9.-]', '', text))
-
-def scrape(url, js, state, sub_state, delay=5):
+def getDriver():
     chrome_options = Options()
     chrome_options.add_argument("--disable-extensions")
     chrome_options.add_argument("--disable-gpu")
     # chrome_options.add_argument("--no-sandbox") # linux only
     chrome_options.add_argument("--headless=new") # for Chrome >= 109
+    chrome_options.add_argument("--user-data-dir=F:/Temp/Selenium")
     # chrome_options.add_argument("--headless")
     # chrome_options.headless = True # also works
-    driver = webdriver.Chrome(options=chrome_options)
+    return webdriver.Chrome(options=chrome_options)
+
+def closeDriver(driver):
+    driver.quit()
+
+def info_float(text):
+    return float(re.sub(r'[^0-9.-]', '', text))
+
+def scrape(driver, url, js, state, sub_state, delay=10):
     js_out = {}
     name = convert.get(js, "name")
     file_name = convert.get(js, "file_name")
@@ -24,10 +33,16 @@ def scrape(url, js, state, sub_state, delay=5):
     try:
         key = convert.get(js, "db")
         driver.get(url+key)
-        time.sleep(delay)
+        d_trigger = convert.get(js, "d_trigger", "name")
+        try:
+            WebDriverWait(driver, delay).until(
+                EC.presence_of_element_located((By.XPATH, f"//h5[text()='{d_trigger}']"))
+            )
+        except Exception as e:
+            print(f"Error: Unable to find the element with text '{d_trigger}'. {e}")
+            return
         rendered_html = driver.page_source
         soup = BeautifulSoup(rendered_html, 'html.parser')
-        d_trigger = convert.get(js, "d_trigger", "name")
         target_h5 = soup.find('h5', text=d_trigger)
         
         if not target_h5:
@@ -57,9 +72,6 @@ def scrape(url, js, state, sub_state, delay=5):
             return
         
         _comment = main_div.findChild('p', recursive=False).get_text(strip=True)
-        if _comment == "":
-            print("comment not found")
-            return
         
         main_array_div = main_div.findChildren('div', recursive=False)
         if not main_array_div:
@@ -86,7 +98,9 @@ def scrape(url, js, state, sub_state, delay=5):
         _, additional_info_div = additional_info_div.findChildren('div', recursive=False)
         additional_info = {}
         for info in additional_info_div.find_all('tr'):
-            additional_info[convert.s(info.find('th').get_text(strip=True).replace('.',''))] = info_float(info.find('td').get_text(strip=True))
+            additional_info_key = convert.s(info.find('th').get_text(strip=True).replace('.',''))
+            additional_info_value = info_float(info.find('td').get_text(strip=True))
+            additional_info[additional_info_key] = additional_info_value
         data['additional_info'] = additional_info
         data['state'] = state
         data['type'] = sub_state
@@ -106,14 +120,16 @@ def scrape(url, js, state, sub_state, delay=5):
             data_value = {}
             img=[]
 
-            def inner_left(js=js,data_value=data_value,img=img):
+            def inner_left(js=js,data_value=data_value):
                 left=div[0]
-                left_name = convert.get(js, "file", left.get('title'))
+                left_name = left.findChild('a',recursive=False)['href'].split('/')[-1]
                 data_value["min"] = info_float(left.findChild('a').findChild('span').get_text(strip=True))
                 data_value["min_target"] =  left_name
                 return 
             
-            def inner_right(data_value=data_value):
+            def inner_right(js=js,data_value=data_value):
+                right=div[-1]
+                right_name = right.findChild('a',recursive=False)['href'].split('/')[-1]
                 data_value["max"] = info_float(right.findChild('a').findChild('span').get_text(strip=True))
                 data_value["max_target"] = right_name
             
@@ -124,12 +140,10 @@ def scrape(url, js, state, sub_state, delay=5):
                     left_img = img[0]
                     left_alt = left_img.get('alt', None).replace(" into...", '').lower()
                     div = body.findChildren('div', recursive=False)
-                    right=div[-1]
-                    right_name = convert.get(js, "file", right.get('title'))
                     if left_alt in left_arrow:
                         right_img = img[-1]
                         right_alt = right_img.get('alt', None).replace(" into...", '').lower()
-                        inner_left(js,data_value,img)
+                        inner_left(js,data_value)
                         data_value["min_process"] = left_alt
                         if len(img) > 1:
                             inner_right(data_value)
@@ -138,7 +152,7 @@ def scrape(url, js, state, sub_state, delay=5):
                         if len(img) > 1:
                             right_img = img[1]
                             right_img.get('alt', None).replace(" into...", '').lower()
-                            inner_left(js, data_value, img)
+                            inner_left(js, data_value)
                             data_value["min_process"] = right_alt
                         inner_right(data_value)
                         data_value["max_process"] = left_alt
@@ -154,6 +168,6 @@ def scrape(url, js, state, sub_state, delay=5):
             "recipe": recipe
         }
         return js_out
-    finally:
-        # Close the browser
-        driver.quit()
+    except Exception as e:
+        print(f"An error occurred during scraping: {e}")
+        return None

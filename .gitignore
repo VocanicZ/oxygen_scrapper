@@ -1,3 +1,6 @@
-/database
-/error
+/database/
+/error/
 /t.txt
+/test/
+/.venv/
+/_pycache/

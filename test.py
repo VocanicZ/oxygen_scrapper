@@ -31,8 +31,8 @@ def scrap(env, database_elements, uri, delay=5):
             elements[name] = js_out
             file_map[name] = js["name"]
             db_map[convert.get(js, "db")] = name
-            #with safe_open.w(f"{env}/elements/{state}/{sub_state}/{name}.json") as file:
-            #    file.write(json.dumps(js_out, indent=4))
+            with safe_open.w(f"{env}/elements/{state}/{sub_state}/{name}.json") as file:
+                file.write(json.dumps(js_out, indent=4))
 
         for i in content["contents"]:
             if "contents" not in i:
@@ -73,7 +73,7 @@ def save(env, elements, file_map, db_map):
 
 # Main execution
 start = time.time()
-env = "database"
+env = "test"
 uri = "https://oni-db.com/details/"
 
 database_elements = initialize()
