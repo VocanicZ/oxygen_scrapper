@@ -550,7 +550,9 @@
                                     "name": "Corium"
                                 },
                                 {
-                                    "name": "Diamond"
+                                    "name": "Diamond",
+                                    "file_name": "solid_diamond",
+                                    "db": "diamond"
                                 },
                                 {
                                     "name": "Solid Nuclear Waste"
@@ -590,10 +592,14 @@
                                     "name": "Depleted Uranium"
                                 },
                                 {
-                                    "name": "Gold"
+                                    "name": "Gold",
+                                    "file_name": "solid_gold",
+                                    "db": "gold"
                                 },
                                 {
-                                    "name": "Iron"
+                                    "name": "Iron",
+                                    "file_name": "solid_iron",
+                                    "db": "iron"
                                 },
                                 {
                                     "name": "Lead"
