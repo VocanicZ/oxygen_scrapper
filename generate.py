@@ -158,6 +158,17 @@ def scrape(driver, url, js, state, sub_state, delay=10):
                         data_value["max_process"] = left_alt
 
             recipe[data_key] = data_value
+
+        default = {}
+        default["temperature"] = convert.getText(js, "temperature")
+        match state:
+            case "solid":
+                default["mass"] = convert.getText(js, "solid_mass")
+            case "liquid":
+                default["mass"] = convert.getText(js, "liquid_mass")
+            case "gas":
+                default["mass"] = convert.getText(js, "gas_mass")
+
         
         # final touch
         js_out = {
@@ -165,7 +176,8 @@ def scrape(driver, url, js, state, sub_state, delay=10):
             "id": file_name,
             "_comment": _comment,
             "data": data,
-            "recipe": recipe
+            "recipe": recipe,
+            "default": default
         }
         return js_out
     except Exception as e:

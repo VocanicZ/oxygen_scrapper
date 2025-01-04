@@ -98,3 +98,8 @@ def get(js, key, text=None, convert=convert, default=default):
     if key in convert:
         return convert[key](text)
     return convert[default[key]](text)
+
+def getText(js, key, default=default):
+    if key in js:
+        return js[key]
+    return default[key]

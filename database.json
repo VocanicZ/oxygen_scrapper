@@ -7,7 +7,15 @@
                 "db": "f",
                 "d_trigger": "ca",
                 "file": "s",
-                "file_name": "s"
+                "file_name": "s",
+                "gas_mass": 1,
+                "liquid_mass": 600,
+                "solid_mass": 1000,
+                "temperature": 27,
+                "spaceout": false,
+                "frosty": false,
+                "bionic": false,
+                "unused": false
             },
             "contents": [
                 {
@@ -32,86 +40,119 @@
                                     "name": "Carbon Dioxide"
                                 },
                                 {
-                                    "name": "Aluminum",
+                                    "name": "Aluminum Gas",
                                     "file_name": "aluminum_gas",
-                                    "wiki": "Gas_Aluminum"
+                                    "wiki": "Gas_Aluminum",
+                                    "d_trigger": "Aluminum",
+                                    "temperature": 2927
                                 },
                                 {
-                                    "name": "Carbon",
+                                    "name": "Carbon Gas",
                                     "file_name": "carbon_gas",
-                                    "wiki": "Gas_Carbon"
+                                    "wiki": "Gas_Carbon",
+                                    "d_trigger": "Carbon",
+                                    "temperature": 5427
                                 },
                                 {
-                                    "name": "Chlorine",
+                                    "name": "Chlorine Gas",
                                     "file_name": "chlorine_gas",
-                                    "wiki": "Gas_Chlorine"
+                                    "wiki": "Gas_Chlorine",
+                                    "d_trigger": "Chlorine"
                                 },
                                 {
                                     "name": "Cobalt",
                                     "file_name": "cobalt_gas",
-                                    "wiki": "Gas_Cobalt"
+                                    "wiki": "Gas_Cobalt",
+                                    "spaceout": true
                                 },
                                 {
-                                    "name": "Copper",
+                                    "name": "Copper Gas",
                                     "file_name": "copper_gas",
-                                    "wiki": "Gas_Copper"
+                                    "wiki": "Gas_Copper",
+                                    "d_trigger": "Copper",
+                                    "temperature": 2927
                                 },
                                 {
-                                    "name": "Ethanol",
+                                    "name": "Ethanol Gas",
                                     "file_name": "ethanol_gas",
-                                    "wiki": "Gas_Ethanol"
+                                    "wiki": "Gas_Ethanol",
+                                    "d_trigger": "Ethanol",
+                                    "temperature": 117
                                 },
                                 {
-                                    "name": "Gold",
+                                    "name": "Gold Gas",
                                     "file_name": "gold_gas",
-                                    "wiki": "Gas_Gold"
+                                    "wiki": "Gas_Gold",
+                                    "d_trigger": "Gold",
+                                    "temperature": 3227
                                 },
                                 {
-                                    "name": "Iron",
+                                    "name": "Iron Gas",
                                     "file_name": "iron_gas",
-                                    "wiki": "Gas_Iron"
+                                    "wiki": "Gas_Iron",
+                                    "d_trigger": "Iron",
+                                    "temperature": 3727
                                 },
                                 {
-                                    "name": "Lead",
+                                    "name": "Lead Gas",
                                     "file_name": "lead_gas",
-                                    "wiki": "Gas_Lead"
+                                    "wiki": "Gas_Lead",
+                                    "d_trigger": "Lead",
+                                    "temperature": 3227
                                 },
                                 {
-                                    "name": "Niobium",
+                                    "name": "Niobium Gas",
                                     "file_name": "niobium_gas",
-                                    "wiki": "Gas_Niobium"
+                                    "wiki": "Gas_Niobium",
+                                    "d_trigger": "Niobium",
+                                    "temperature": 5227
                                 },
                                 {
-                                    "name": "Phosphorus",
+                                    "name": "Phosphorus Gas",
                                     "file_name": "phosphorus_gas",
-                                    "wiki": "Gas_Phosphorus"
+                                    "wiki": "Gas_Phosphorus",
+                                    "d_trigger" : "Phosphorus",
+                                    "temperature": 427
                                 },
                                 {
-                                    "name": "Salt",
+                                    "name": "Salt Gas",
                                     "file_name": "salt_gas",
-                                    "wiki": "Gas_Salt"
+                                    "wiki": "Gas_Salt",
+                                    "d_trigger": "Salt",
+                                    "temperature": 2727
                                 },
                                 {
-                                    "name": "Steel",
+                                    "name": "Steel Gas",
                                     "file_name": "steel_gas",
-                                    "wiki": "Gas_Steel"
+                                    "wiki": "Gas_Steel",
+                                    "d_trigger": "Steel",
+                                    "temperature": 4227
                                 },
                                 {
-                                    "name": "Sulfur",
+                                    "name": "Sulfur Gas",
                                     "file_name": "sulfur_gas",
-                                    "wiki": "Gas_Sulfur"
+                                    "wiki": "Gas_Sulfur",
+                                    "d_trigger": "Sulfur",
+                                    "temperature": 427
                                 },
                                 {
-                                    "name": "Super Coolant",
+                                    "name": "Super Coolant Gas",
                                     "file_name": "super_coolant_gas",
-                                    "wiki": "Gas_Super_Coolant"
+                                    "wiki": "Gas_Super_Coolant",
+                                    "d_trigger": "Super Coolant",
+                                    "temperature": 577
                                 },
                                 {
-                                    "name": "Tungsten",
-                                    "file_name": "tungsten_gas"
+                                    "name": "Tungsten Gas",
+                                    "file_name": "tungsten_gas",
+                                    "d_trigger": "Tungsten",
+                                    "temperature": 6227
                                 },
                                 {
-                                    "name": "Hydrogen"
+                                    "name": "Hydrogen Gas",
+                                    "file_name": "hydrogen",
+                                    "d_trigger": "Hydrogen",
+                                    "wiki": "Hydrogen_Gas"
                                 },
                                 {
                                     "name": "Natural Gas",
@@ -120,19 +161,23 @@
                                 },
                                 {
                                     "name": "Nuclear Fallout",
-                                    "db": "fallout"
+                                    "db": "fallout",
+                                    "spaceout": true
                                 },
                                 {
-                                    "name": "Propane"
+                                    "name": "Propane",
+                                    "unused": true
                                 },
                                 {
-                                    "name": "Rock Gas"
+                                    "name": "Rock Gas",
+                                    "temperature": 2727
                                 },
                                 {
                                     "name": "Sour Gas"
                                 },
                                 {
-                                    "name": "Steam"
+                                    "name": "Steam",
+                                    "temperature": 127
                                 }
                             ]
                         }
@@ -142,134 +187,209 @@
                     "name": "liquid",
                     "contents": [
                         {
-                            "name": "Brine"
+                            "name": "Brine",
+                            "liquid_mass": 1200,
+                            "temperature": 9
                         },
                         {
-                            "name": "Chlorine"
+                            "name": "Liquid Chlorine",
+                            "file_name": "chlorine",
+                            "d_trigger": "Chlorine",
+                            "temperature": -73
                         },
                         {
-                            "name": "Crude Oil"
+                            "name": "Crude Oil",
+                            "liquid_mass": 870,
+                            "temperature": 77
                         },
                         {
-                            "name": "Ethanol"
+                            "name": "Ethanol",
+                            "liquid_mass": 1000
                         },
                         {
-                            "name": "Carbon Dioxide",
-                            "file_name": "liquid_carbon_dioxide"
+                            "name": "Liquid Carbon Dioxide",
+                            "file_name": "liquid_carbon_dioxide",
+                            "d_trigger": "Carbon Dioxide",
+                            "temperature": -53
                         },
                         {
-                            "name": "Hydrogen",
-                            "file_name": "liquid_hydrogen"
+                            "name": "Liquid Hydrogen",
+                            "file_name": "liquid_hydrogen",
+                            "d_trigger": "Hydrogen",
+                            "temperature": -255
                         },
                         {
-                            "name": "Methane",
-                            "file_name": "liquid_methane"
+                            "name": "Liquid Methane",
+                            "file_name": "liquid_methane",
+                            "d_trigger": "Methane",
+                            "temperature": -173
                         },
                         {
-                            "name": "Oxygen",
-                            "file_name": "liquid_oxygen"
+                            "name": "Liquid Oxygen",
+                            "file_name": "liquid_oxygen",
+                            "d_trigger": "Oxygen",
+                            "liquid_mass": 300,
+                            "temperature": -199
                         },
                         {
-                            "name": "Phosphorus",
-                            "file_name": "liquid_phosphorus"
+                            "name": "Liquid Phosphorus",
+                            "file_name": "liquid_phosphorus",
+                            "d_trigger": "Phosphorus",
+                            "liquid_mass": 200,
+                            "temperature": 227
                         },
                         {
                             "name": "Propane",
-                            "file_name": "liquid_propane"
+                            "file_name": "liquid_propane",
+                            "unused": true
                         },
                         {
-                            "name": "Liquid Sulfur"
+                            "name": "Liquid Sulfur",
+                            "liquid_mass": 190,
+                            "temperature": 177
                         },
                         {
-                            "name": "Magma"
+                            "name": "Magma",
+                            "liquid_mass": 1840,
+                            "temperature": 1727
                         },
                         {
-                            "name": "Aluminum",
-                            "file_name": "molten_aluminum"
+                            "name": "Molten Aluminum",
+                            "file_name": "molten_aluminum",
+                            "d_trigger": "Aluminum",
+                            "liquid_mass": 1000,
+                            "temperature": 1727
                         },
                         {
                             "name": "Carbon",
-                            "file_name": "molten_carbon"
+                            "file_name": "molten_carbon",
+                            "temperature": 4327
                         },
                         {
                             "name": "Cobalt",
-                            "file_name": "molten_cobalt"
+                            "file_name": "molten_cobalt",
+                            "spaceout": true
                         },
                         {
-                            "name": "Copper",
-                            "file_name": "molten_copper"
+                            "name": "Molten Copper",
+                            "file_name": "molten_copper",
+                            "d_trigger": "Copper",
+                            "liquid_mass": 900,
+                            "temperature": 1527
                         },
                         {
-                            "name": "Glass",
-                            "file_name": "molten_glass"
+                            "name": "Molten Glass",
+                            "file_name": "molten_glass",
+                            "d_trigger": "Glass",
+                            "liquid_mass": 200,
+                            "temperature": 1942
                         },
                         {
-                            "name": "Gold",
-                            "file_name": "molten_gold"
+                            "name": "Molten Gold",
+                            "file_name": "molten_gold",
+                            "d_trigger": "Gold",
+                            "liquid_mass": 870,
+                            "temperature": 1727
                         },
                         {
-                            "name": "Iron",
-                            "file_name": "molten_iron"
+                            "name": "Molten Iron",
+                            "file_name": "molten_iron",
+                            "d_trigger": "Iron",
+                            "liquid_mass": 1000,
+                            "temperature": 2227
                         },
                         {
-                            "name": "Lead",
-                            "file_name": "molten_lead"
+                            "name": "Molten Lead",
+                            "file_name": "molten_lead",
+                            "d_trigger": "Lead",
+                            "liquid_mass": 3000,
+                            "temperature": 1727
                         },
                         {
-                            "name": "Niobium",
-                            "file_name": "molten_niobium"
+                            "name": "Molten Niobium",
+                            "file_name": "molten_niobium",
+                            "d_trigger": "Niobium",
+                            "liquid_mass": 900,
+                            "temperature": 2727
                         },
                         {
-                            "name": "Salt",
-                            "file_name": "molten_salt"
+                            "name": "Molten Salt",
+                            "file_name": "molten_salt",
+                            "d_trigger": "Salt",
+                            "liquid_mass": 190,
+                            "temperature": 177
                         },
                         {
-                            "name": "Steel",
-                            "file_name": "molten_steel"
+                            "name": "Molten Steel",
+                            "file_name": "molten_steel",
+                            "d_trigger": "Steel",
+                            "liquid_mass": 900,
+                            "temperature": 1727
                         },
                         {
-                            "name": "Sucrose",
-                            "file_name": "molten_sucrose"
+                            "name": "Liquid Sucrose",
+                            "file_name": "molten_sucrose",
+                            "d_trigger": "Sucrose",
+                            "liquid_mass": 190,
+                            "temperature": 227
                         },
                         {
-                            "name": "Tungsten",
-                            "file_name": "molten_tungsten"
+                            "name": "Molten Tungsten",
+                            "file_name": "molten_tungsten",
+                            "d_trigger": "Tungsten",
+                            "liquid_mass": 200,
+                            "temperature": 3727
                         },
                         {
                             "name": "Uranium",
-                            "file_name": "molten_uranium"
+                            "file_name": "molten_uranium",
+                            "spaceout": true
                         },
                         {
-                            "name": "Naphtha"
+                            "name": "Liquid Naphtha",
+                            "file_name": "naphtha",
+                            "d_trigger": "Naphtha",
+                            "liquid_mass": 740,
+                            "temperature": 77
                         },
                         {
                             "name": "Nuclear Waste",
-                            "file_name": "nuclear_waste"
+                            "file_name": "nuclear_waste",
+                            "spaceout": true
                         },
                         {
-                            "name": "Petroleum"
+                            "name": "Petroleum",
+                            "liquid_mass": 740
                         },
                         {
                             "name": "Polluted Water",
-                            "db": "dirtywater"
+                            "db": "dirtywater",
+                            "liquid_mass": 1000
                         },
                         {
-                            "name": "Resin"
+                            "name": "Resin",
+                            "spaceout": true
                         },
                         {
-                            "name": "Salt Water"
+                            "name": "Salt Water",
+                            "liquid_mass": 1100
                         },
                         {
-                            "name": "Super Coolant"
+                            "name": "Super Coolant",
+                            "liquid_mass": 800,
+                            "temperature": -35
                         },
                         {
-                            "name": "Visco-Gel",
+                            "name": "Visco-Gel Fluid",
                             "file_name": "visco_gel",
                             "d_trigger": "Visco-Gel",
-                            "wiki": "Visco-Gel"
+                            "wiki": "Visco-Gel",
+                            "liquid_mass": 100,
+                            "temperature": -35
                         },
                         {
-                            "name": "Water"
+                            "name": "Water",
+                            "liquid_mass": 1000
                         }
                     ]
                 },
@@ -280,10 +400,12 @@
                             "name": "agriculture",
                             "contents": [
                                 {
-                                    "name": "Fertilizer"
+                                    "name": "Fertilizer",
+                                    "solid_mass": 200
                                 },
                                 {
-                                    "name": "Phosphorite"
+                                    "name": "Phosphorite",
+                                    "solid_mass": 600
                                 }
                             ]
                         },
@@ -302,19 +424,24 @@
                                     "name": "Ceramic"
                                 },
                                 {
-                                    "name": "Fossil"
+                                    "name": "Fossil",
+                                    "solid_mass": 500
                                 },
                                 {
-                                    "name": "Granite"
+                                    "name": "Granite",
+                                    "solid_mass": 1840
                                 },
                                 {
-                                    "name": "Graphite"
+                                    "name": "Graphite",
+                                    "spaceout": true
                                 },
                                 {
-                                    "name": "Igneous Rock"
+                                    "name": "Igneous Rock",
+                                    "solid_mass": 1840
                                 },
                                 {
-                                    "name": "Mafic Rock"
+                                    "name": "Mafic Rock",
+                                    "solid_mass": 1840
                                 },
                                 {
                                     "name": "Obsidian"
@@ -323,7 +450,8 @@
                                     "name": "Sandstone"
                                 },
                                 {
-                                    "name": "Sedimentary Rock"
+                                    "name": "Sedimentary Rock",
+                                    "solid_mass": 1840
                                 }
                             ]
                         },
@@ -331,37 +459,53 @@
                             "name": "consumable_ore",
                             "contents": [
                                 {
-                                    "name": "Bleach Stone"
+                                    "name": "Bleach Stone",
+                                    "solid_mass": 50
                                 },
                                 {
                                     "name": "Coal",
-                                    "db": "carbon"
+                                    "db": "carbon",
+                                    "solid_mass": 600
                                 },
                                 {
-                                    "name": "Lime"
+                                    "name": "Lime",
+                                    "temperature": 17
                                 },
                                 {
                                     "name": "Oxylite",
-                                    "db": "oxyrock"
+                                    "db": "oxyrock",
+                                    "solid_mass": 200
                                 },
                                 {
-                                    "name": "Phosphorus"
+                                    "name": "Refined Phosphorus",
+                                    "file_name": "phosphorus",
+                                    "d_trigger": "Phosphorus",
+                                    "wiki": "Refined Phosphorus",
+                                    "solid_mass": 200
                                 },
                                 {
-                                    "name": "Refined Carbon"
+                                    "name": "Refined Carbon",
+                                    "solid_mass": 600
                                 },
                                 {
-                                    "name": "Rust"
+                                    "name": "Rust",
+                                    "solid_mass": 800
                                 },
                                 {
-                                    "name": "Salt"
+                                    "name": "Salt",
+                                    "solid_mass": 500,
+                                    "temperature": 17
                                 },
                                 {
                                     "name": "Methane",
-                                    "file_name": "solid_methane"
+                                    "file_name": "solid_methane",
+                                    "solid_mass": 500,
+                                    "temperature": -223
                                 },
                                 {
-                                    "name": "Sucrose"
+                                    "name": "Sucrose",
+                                    "solid_mass": 500,
+                                    "temperature": 17
                                 }
                             ]
                         },
@@ -369,10 +513,13 @@
                             "name": "cultivable_soil",
                             "contents": [
                                 {
-                                    "name": "Clay"
+                                    "name": "Clay",
+                                    "temperature": 17
                                 },
                                 {
-                                    "name": "Dirt"
+                                    "name": "Dirt",
+                                    "solid_mass": 1840,
+                                    "temperature": 17
                                 }
                             ]
                         },
@@ -391,52 +538,82 @@
                             "name": "liquefiable",
                             "contents": [
                                 {
-                                    "name": "Brine Ice"
+                                    "name": "Brine Ice",
+                                    "temperature": -41
                                 },
                                 {
-                                    "name": "Crushed Ice"
+                                    "name": "Crushed Ice",
+                                    "solid_mass": 10,
+                                    "temperature": -31
                                 },
                                 {
-                                    "name": "Ice"
+                                    "name": "Ice",
+                                    "temperature": -41
                                 },
                                 {
                                     "name": "Polluted Ice",
-                                    "db": "dirtyice"
+                                    "db": "dirtyice",
+                                    "solid_mass": 500,
+                                    "temperature": -43
                                 },
                                 {
-                                    "name": "Snow"
+                                    "name": "Snow",
+                                    "solid_mass": 10,
+                                    "temperature": -31
                                 },
                                 {
-                                    "name": "Carbon Dioxide",
-                                    "file_name": "solid_carbon_dioxide"
+                                    "name": "Solid Carbon Dioxide",
+                                    "file_name": "solid_carbon_dioxide",
+                                    "d_trigger": "Carbon Dioxide",
+                                    "solid_mass": 600,
+                                    "temperature": -81
                                 },
                                 {
-                                    "name": "Chlorine",
-                                    "file_name": "solid_chlorine"
+                                    "name": "Solid Chlorine",
+                                    "file_name": "solid_chlorine",
+                                    "d_trigger": "Chlorine",
+                                    "solid_mass": 600,
+                                    "temperature": -123
                                 },
                                 {
-                                    "name": "Crude Oil",
-                                    "file_name": "solid_crude_oil"
+                                    "name": "Solid Crude Oil",
+                                    "file_name": "solid_crude_oil",
+                                    "d_trigger": "Crude Oil",
+                                    "solid_mass": 870,
+                                    "temperature": -73
                                 },
                                 {
-                                    "name": "Hydrogen",
-                                    "file_name": "solid_hydrogen"
+                                    "name": "Solid Hydrogen",
+                                    "file_name": "solid_hydrogen",
+                                    "d_trigger": "Hydrogen",
+                                    "solid_mass": 600,
+                                    "temperature": -268
                                 },
                                 {
-                                    "name": "Naphtha",
-                                    "file_name": "solid_naphtha"
+                                    "name": "Solid Naphtha",
+                                    "file_name": "solid_naphtha",
+                                    "d_trigger": "Naphtha",
+                                    "solid_mass": 740,
+                                    "temperature": -73
                                 },
                                 {
-                                    "name": "Oxygen",
-                                    "file_name": "solid_oxygen"
+                                    "name": "Solid Oxygen",
+                                    "file_name": "solid_oxygen",
+                                    "d_trigger": "Oxygen",
+                                    "solid_mass": 500,
+                                    "temperature": -243
                                 },
                                 {
-                                    "name": "Petroleum",
-                                    "file_name": "solid_petroleum"
+                                    "name": "Solid Petroleum",
+                                    "file_name": "solid_petroleum",
+                                    "d_trigger": "Petroleum",
+                                    "solid_mass": 740,
+                                    "temperature": -73
                                 },
                                 {
                                     "name": "Propane",
-                                    "file_name": "solid_propane"
+                                    "file_name": "solid_propane",
+                                    "unused": true
                                 }
                             ]
                         },
@@ -444,36 +621,49 @@
                             "name": "manufactured_material",
                             "contents": [
                                 {
-                                    "name": "Enriched Uranium"
+                                    "name": "Enriched Uranium",
+                                    "spaceout": true
                                 },
                                 {
-                                    "name": "Glass"
+                                    "name": "Glass",
+                                    "solid_mass": 800
                                 },
                                 {
                                     "name": "Insulatite",
                                     "db": "superinsulator",
-                                    "d_trigger": "Insulation"
+                                    "d_trigger": "Insulation",
+                                    "solid_mass": 900
                                 },
                                 {
                                     "name": "Plastic",
-                                    "db": "polypropylene"
+                                    "db": "polypropylene",
+                                    "solid_mass": 913,
+                                    "temperature": 23
                                 },
                                 {
-                                    "name": "Super Coolant",
-                                    "file_name": "solid_super_coolant"
+                                    "name": "Solid Super Coolant",
+                                    "file_name": "solid_super_coolant",
+                                    "d_trigger": "Super Coolant",
+                                    "solid_mass": 740,
+                                    "temperature": -193
                                 },
                                 {
-                                    "name": "Visco-Gel",
+                                    "name": "Solid Visco-Gel",
                                     "file_name": "solid_visco_gel",
                                     "d_trigger": "Visco-Gel",
-                                    "wiki": "Solid_Visco-Gel"
+                                    "wiki": "Solid_Visco-Gel",
+                                    "solid_mass": 100,
+                                    "temperature": -123
                                 },
                                 {
-                                    "name": "Steel"
+                                    "name": "Steel",
+                                    "solid_mass": 400
                                 },
                                 {
                                     "name": "Thermium",
-                                    "db": "tempconductorsolid"
+                                    "db": "tempconductorsolid",
+                                    "solid_mass": 900,
+                                    "temperature": -31
                                 }
                             ]
                         },
@@ -481,34 +671,43 @@
                             "name": "metal_ore",
                             "contents": [
                                 {
-                                    "name": "Aluminum Ore"
+                                    "name": "Aluminum Ore",
+                                    "solid_mass": 500
                                 },
                                 {
                                     "name": "Cobalt Ore",
-                                    "db": "cobaltite"
+                                    "db": "cobaltite",
+                                    "spaceout": true
                                 },
                                 {
                                     "name": "Copper Ore",
-                                    "db": "cuprite"
+                                    "db": "cuprite",
+                                    "solid_mass": 800
                                 },
                                 {
-                                    "name": "Electrum"
+                                    "name": "Electrum",
+                                    "unused": true
                                 },
                                 {
-                                    "name": "Gold Amalgam"
+                                    "name": "Gold Amalgam",
+                                    "solid_mass": 800
                                 },
                                 {
-                                    "name": "Iron Ore"
+                                    "name": "Iron Ore",
+                                    "solid_mass": 800
                                 },
                                 {
                                     "name": "Pyrite",
-                                    "db": "foolsgold"
+                                    "db": "foolsgold",
+                                    "solid_mass": 800
                                 },
                                 {
-                                    "name": "Uranium Ore"
+                                    "name": "Uranium Ore",
+                                    "spaceout": true
                                 },
                                 {
-                                    "name": "Wolframite"
+                                    "name": "Wolframite",
+                                    "solid_mass": 600
                                 }
                             ]
                         },
@@ -519,7 +718,8 @@
                                     "name": "Algae"
                                 },
                                 {
-                                    "name": "Mud"
+                                    "name": "Mud",
+                                    "spaceout": true
                                 },
                                 {
                                     "name": "Polluted Dirt",
@@ -527,15 +727,19 @@
                                 },
                                 {
                                     "name": "Polluted Mud",
-                                    "db": "toxicmud"
+                                    "db": "toxicmud",
+                                    "spaceout": true
                                 },
                                 {
                                     "name": "Slime",
-                                    "db": "slimemold"
+                                    "db": "slimemold",
+                                    "solid_mass": 200,
+                                    "temperature": 17
                                 },
                                 {
                                     "name": "Solid Resin",
-                                    "d_trigger": "Resin"
+                                    "d_trigger": "Resin",
+                                    "spaceout": true
                                 }
                             ]
                         },
@@ -544,21 +748,26 @@
                             "contents": [
                                 {
                                     "name": "Abyssalite",
-                                    "db": "katairite"
+                                    "db": "katairite",
+                                    "solid_mass": 500
                                 },
                                 {
-                                    "name": "Corium"
+                                    "name": "Corium",
+                                    "spaceout": true
                                 },
                                 {
                                     "name": "Diamond",
                                     "file_name": "solid_diamond",
-                                    "db": "diamond"
+                                    "db": "diamond",
+                                    "solid_mass": 700
                                 },
                                 {
-                                    "name": "Solid Nuclear Waste"
+                                    "name": "Solid Nuclear Waste",
+                                    "spaceout": true
                                 },
                                 {
-                                    "name": "Sulfur"
+                                    "name": "Sulfur",
+                                    "solid_mass": 500
                                 }
                             ]
                         },
@@ -566,13 +775,19 @@
                             "name": "rare_resource",
                             "contents": [
                                 {
-                                    "name": "Fullerene"
+                                    "name": "Fullerene",
+                                    "solid_mass": 30,
+                                    "temperature": -31
                                 },
                                 {
-                                    "name": "Isoresin"
+                                    "name": "Isoresin",
+                                    "solid_mass": 30,
+                                    "temperature": -31
                                 },
                                 {
-                                    "name": "Niobium"
+                                    "name": "Niobium",
+                                    "solid_mass": 30,
+                                    "temperature": -31
                                 }
                             ]
                         },
@@ -580,21 +795,26 @@
                             "name": "refined_metal",
                             "contents": [
                                 {
-                                    "name": "Aluminum"
+                                    "name": "Aluminum",
+                                    "solid_mass": 200
                                 },
                                 {
-                                    "name": "Cobalt"
+                                    "name": "Cobalt",
+                                    "spaceout": true
                                 },
                                 {
-                                    "name": "Copper"
+                                    "name": "Copper",
+                                    "solid_mass": 900
                                 },
                                 {
-                                    "name": "Depleted Uranium"
+                                    "name": "Depleted Uranium",
+                                    "spaceout": true
                                 },
                                 {
                                     "name": "Gold",
                                     "file_name": "solid_gold",
-                                    "db": "gold"
+                                    "db": "gold",
+                                    "solid_mass": 870
                                 },
                                 {
                                     "name": "Iron",
@@ -602,10 +822,12 @@
                                     "db": "iron"
                                 },
                                 {
-                                    "name": "Lead"
+                                    "name": "Lead",
+                                    "solid_mass": 2000
                                 },
                                 {
-                                    "name": "Tungsten"
+                                    "name": "Tungsten",
+                                    "solid_mass": 200
                                 }
                             ]
                         },
@@ -614,7 +836,9 @@
                             "contents": [
                                 {
                                     "name": "Neutronium",
-                                    "db": "unobtanium"
+                                    "db": "unobtanium",
+                                    "solid_mass": 9999,
+                                    "temperature": -272
                                 }
                             ]
                         },
@@ -622,18 +846,23 @@
                             "name": "uncategorised",
                             "contents": [
                                 {
-                                    "name": "Bitumen"
+                                    "name": "Bitumen",
+                                    "unused": true
                                 },
                                 {
                                     "name": "Genetic Ooze",
                                     "db": "creature"
                                 },
                                 {
-                                    "name": "Radium"
+                                    "name": "Radium",
+                                    "unused": true
                                 },
                                 {
-                                    "name": "Ethanol",
-                                    "file_name": "solid_ethanol"
+                                    "name": "Solid Ethanol",
+                                    "file_name": "solid_ethanol",
+                                    "d_trigger": "Ethanol",
+                                    "solid_mass": 100,
+                                    "temperature": -123
                                 }
                             ]
                         }
