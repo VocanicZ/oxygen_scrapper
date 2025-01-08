@@ -20,6 +20,7 @@ def scrap(env, database_elements, uri, delay=5):
 
     for content in database_elements:
         state = content["name"]
+        db_map[state] = {}
         sub_state = ""
 
         def inner(js, state, sub_state):
@@ -30,7 +31,7 @@ def scrap(env, database_elements, uri, delay=5):
                     file.write(json.dumps(js_out, indent=4))
             elements[name] = js_out
             file_map[name] = js["name"]
-            db_map[convert.get(js, "db")] = name
+            db_map[state][convert.get(js, "db")] = name
             with safe_open.w(f"{env}/elements/{state}/{sub_state}/{name}.json") as file:
                 file.write(json.dumps(js_out, indent=4))
 
@@ -49,15 +50,16 @@ def state_modify(elements, db_map):
     for key, value in elements.items():
         if value is None:
             continue
-        state = value.get("recipe", {}).get("state_transitions", {})
-        if "min_target" in state:
-            target = state["min_target"]
-            if target in db_map:
-                state["min_target"] = db_map[target]
-        if "max_target" in state:
-            target = state["max_target"]
-            if target in db_map:
-                state["max_target"] = db_map[target]
+        state = value.get("data", {}).get("state", {})
+        s = value.get("recipe", {}).get("state_transitions", {})
+        if "min_target" in s:
+            target = s["min_target"]
+            if target in db_map[state]:
+                s["min_target"] = db_map[state][target]
+        if "max_target" in s:
+            target = s["max_target"]
+            if target in db_map[state]:
+                s["max_target"] = db_map[state][target]
 
 def save(env, elements, file_map, db_map):
     mega = {}
