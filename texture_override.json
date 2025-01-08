@@ -1,0 +1,37 @@
+{
+    "solid": {
+        "override": {
+            "oxyrock": "oxyrocks",
+            "rust": "iron_oxide",
+            "polypropylene": "plastic",
+            "solidsupercoolant": "super_coolant",
+            "solidviscogel": "viscogel",
+            "tempconductorsolid": "themp_conductor",
+            "toxicsand": "polluted_dirt",
+            "unobtanium.png": "neutronium",
+            "solidethanol": "ethanol",
+            "lime": "limestone",
+            "refinedcarbon": "carbon",
+            "brineice": "ice",
+            "ironore": "hematite"
+        },
+        "none": {
+            "graphite": "graphite",
+            "solidcrudeoil": "solid_crude_oil",
+            "solidnaphtha": "solid_naphtha",
+            "solidpetroleum": "solid_petroleum",
+            "enricheduranium": "enriched_uranium",
+            "cobaltite": "cobalt_ore",
+            "uraniumore": "uranium_ore",
+            "mud": "mud",
+            "solidresin": "solid_resin",
+            "corium": "corium",
+            "solidnuclearwaste": "solid_nuclear_waste",
+            "cobalt": "cobalt",
+            "depleteduranium": "depleted_uranium",
+            "bitumen": "bitumen",
+            "creature": "creature",
+            "radium": "radium"
+        }
+    }
+}
