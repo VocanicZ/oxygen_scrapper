@@ -17,7 +17,7 @@ def flexible_open_image(input_file):
         if pattern.fullmatch(filename):
             file_path = os.path.join(source_dir, filename)
             # Open and return the image
-            print(f" -- input {file_base_name} file {filename} found")
+            #print(f" -- input {file_base_name} file {filename} found")
             return Image.open(file_path)
     
     # If no matching file is found, raise an error
