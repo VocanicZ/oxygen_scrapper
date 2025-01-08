@@ -32,7 +32,7 @@ def process_and_crop_image(input_file, width=16, scale=1, file_name=None):
     if image.size[0] != image.size[1]:
         raise ValueError(f"The input image must be square. {base_name}")
     
-    base_scale = 1024
+    base_scale = 1
     scale_multiplier = image.size[0] // base_scale
     
     if scale != 1:
@@ -42,17 +42,17 @@ def process_and_crop_image(input_file, width=16, scale=1, file_name=None):
         scaled_image = image
 
     base_name = file_name if file_name else base_name
-    output_dir = "ctm/" + base_name
+    output_dir = "ctm/solid/" + base_name
     os.makedirs(output_dir, exist_ok=True)
 
     image_plain = scaled_image.copy()
-    image_plain = image_plain.resize((width, width))
+    image_plain = image_plain.resize((16, 16))
     output_plain = os.path.join(output_dir, f"{base_name}.png")
     image_plain.save(output_plain)
 
     suffix = 0
     crop_size = width
-    crop_count = scaled_width//width
+    crop_count = scaled_image.size[0]//width
     for i in range(crop_count):
         for j in range(crop_count):
             left = j * crop_size

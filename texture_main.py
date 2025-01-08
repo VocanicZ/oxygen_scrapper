@@ -2,8 +2,8 @@ import texture_crop as crop
 import safe_open
 
 def main():
-    scale = 16
-    size = 16
+    scale = 1
+    size = 128
     ls = safe_open.r("database/db_map.json")
     override = safe_open.r("texture_override.json")
     override_material = override.get("solid", {}).get("override", {})
