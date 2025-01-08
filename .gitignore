@@ -1,6 +1,8 @@
 /database/
 /error/
-/t.txt
 /test/
 /.venv/
 /_pycache/
+/source/
+/ctm/
+/.database.json
